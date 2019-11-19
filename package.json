@@ -1,0 +1,35 @@
+{
+  "name": "runner-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --env development"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cruznovsky/runner-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cruznovsky/runner-shop/issues"
+  },
+  "homepage": "https://github.com/cruznovsky/runner-shop#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
