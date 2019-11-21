@@ -1,0 +1,105 @@
+.Header {
+    background-color: #2980b9;
+}
+
+.Navigation {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+}
+
+.LogoContainer {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.Logo {
+    border-bottom: 2px solid rgb(204, 204, 204);
+    padding-bottom: 3px;
+    font-size: 20px;
+}
+
+.NavLinks {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    list-style: none;
+}
+
+.NavLink {
+    color: rgb(204, 204, 204);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.Burger {
+    display: none;
+    cursor: pointer;
+}
+
+.Burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(204, 204, 204);
+    margin: 5px;
+    transition: all .3s ease-in;
+}
+
+@media screen and (max-width: 1200px) {
+    .NavLinks {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .NavLinks {
+        position: absolute;
+        right: 0;
+        height: calc(100vh - 70px);
+        top: 70px;
+        background-color: #2980b9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform .5s ease-in;
+    }
+    .Burger {
+        display: block;
+    }
+}
+
+.NavLinksActive {
+    transform: translateX(0%);
+}
+
+.Toggle .BurgerLineOne {
+    transform: rotate(-45deg) translate(-5px, 6px)
+}
+
+.Toggle .BurgerLineTwo {
+    opacity: 0;
+}
+
+.Toggle .BurgerLineThree {
+    transform: rotate(45deg) translate(-5px, -6px)
+}
+
+.ShoppingBasket {
+    color: rgb(204, 204, 204);
+}
+
+.NavLinks li:hover {
+    transform: scale(1.1);
+}

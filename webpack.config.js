@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './src/script.js',
+    entry: './src/index.js',
     output: {
         path: `${__dirname}/build`,
         filename: 'bundle.js'
@@ -18,6 +18,18 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    { loader: 'style-loader' },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    }
+                ]
             }
         ]
     }
