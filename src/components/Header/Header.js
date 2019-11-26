@@ -1,7 +1,8 @@
-import React from 'react'
-import styles from './Header.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+// import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
+import styles from './Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
 class Header extends React.Component {
 
@@ -22,7 +23,7 @@ class Header extends React.Component {
     render() {
         const { isVisible } = this.state;
         return (
-            <div className={styles.Header}>
+            <header className={styles.Header}>
                 <nav className={styles.Navigation}>
                     <div className={styles.LogoContainer}>
                         <h4 className={styles.Logo}>runner shop</h4>
@@ -40,7 +41,7 @@ class Header extends React.Component {
                         <div className={styles.BurgerLineThree}></div>
                     </div>
                 </nav>
-            </div>
+            </header>
         );
     }
 }

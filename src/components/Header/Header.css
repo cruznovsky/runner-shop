@@ -1,14 +1,18 @@
 .Header {
     background-color: #2980b9;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
 }
 
 .Navigation {
-    max-width: 1400px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 70px;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 .LogoContainer {
@@ -21,6 +25,7 @@
     border-bottom: 2px solid rgb(204, 204, 204);
     padding-bottom: 3px;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .NavLinks {
@@ -31,12 +36,25 @@
     list-style: none;
 }
 
+.NavLinks li {
+    transition: transform .1s ease-in;
+}
+
+.NavLinks li:hover {
+    transform: scale(1.1);
+}
+
 .NavLink {
     color: rgb(204, 204, 204);
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     letter-spacing: 3px;
+}
+
+.NavLink:hover {
+    text-decoration: none;
+    color: rgb(204, 204, 204);
 }
 
 .Burger {
@@ -50,38 +68,6 @@
     background-color: rgb(204, 204, 204);
     margin: 5px;
     transition: all .3s ease-in;
-}
-
-@media screen and (max-width: 1200px) {
-    .NavLinks {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-    .NavLinks {
-        position: absolute;
-        right: 0;
-        height: calc(100vh - 70px);
-        top: 70px;
-        background-color: #2980b9;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform .5s ease-in;
-    }
-    .Burger {
-        display: block;
-    }
-}
-
-.NavLinksActive {
-    transform: translateX(0%);
 }
 
 .Toggle .BurgerLineOne {
@@ -100,6 +86,38 @@
     color: rgb(204, 204, 204);
 }
 
-.NavLinks li:hover {
-    transform: scale(1.1);
+@media screen and (max-width: 1200px) {
+    .NavLinks {
+        width: 60%;
+    }
+    .Logo {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .NavLinks {
+        position: absolute;
+        right: 0;
+        height: calc(100vh - 70px);
+        top: 70px;
+        z-index: 99;
+        background-color: #2980b9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform .5s ease-in;
+    }
+    .Burger {
+        display: block;
+    }
+}
+
+.NavLinksActive {
+    transform: translateX(0%);
 }

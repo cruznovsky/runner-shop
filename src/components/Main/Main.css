@@ -1,0 +1,20 @@
+.Main {
+    margin-top: 140px;
+}
+
+.SortMenuHeader {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.SortMenuOptions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.SortMenuOption {
+    margin-top: 8px;
+    cursor: pointer;
+}
